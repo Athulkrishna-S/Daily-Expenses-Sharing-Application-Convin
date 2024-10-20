@@ -28,7 +28,7 @@ endpoint : /user/create
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|object| no |none|
+|body|body|object| yes |none|
 |» name|body|string| yes |none|
 |» mobile|body|integer| yes |none|
 |» email|body|string| yes |none|
@@ -62,8 +62,8 @@ endpoint : /user/getDetail
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|Authorization|header|string| no |none|
-|body|body|object| no |none|
+|Authorization|header|string| yes |none|
+|body|body|object| yes |none|
 
 > Response Examples
 
@@ -107,8 +107,8 @@ endpoint : /expense/add
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|Authorization|header|string| no |none|
-|body|body|object| no |none|
+|Authorization|header|string| yes |none|
+|body|body|object| yes |none|
 
 > Response Examples
 
@@ -130,7 +130,7 @@ endpoint : /expense/download/balanacesheet
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|Authorization|header|string| no |none|
+|Authorization|header|string| yes |none|
 
 
 
@@ -150,8 +150,8 @@ endpoint : /expense/userexp
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|Authorization|header|string| no |none|
-|body|body|object| no |none|
+|Authorization|header|string| yes |none|
+|body|body|object| yes |none|
 
 > Response Examples
 
@@ -210,7 +210,7 @@ endpoint : /user/login
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|object| no |none|
+|body|body|object| yes |none|
 
 > Response Examples
 
@@ -233,7 +233,7 @@ endpoint : /user/logout
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
-|Authorization|header|string| no |none|
+|Authorization|header|string| yes |none|
 
 > Response Examples
 
