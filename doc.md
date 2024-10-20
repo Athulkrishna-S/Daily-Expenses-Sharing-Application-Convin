@@ -10,7 +10,7 @@
 
 # userAPIs
 
-## POST Create User
+### POST Create User
 
 endpoint : /user/create
 
@@ -46,7 +46,7 @@ endpoint : /user/create
 
 
 
-## GET getUserDetails
+### GET getUserDetails
 
 endpoint : /user/getDetail
 
@@ -79,7 +79,7 @@ endpoint : /user/getDetail
 
 # ExpenseAPIs
 
-## POST addExpense
+### POST addExpense
 
 endpoint : /expense/add
 
@@ -118,7 +118,7 @@ endpoint : /expense/add
 ```
 
 
-## GET DownloadBalanceSheet
+### GET DownloadBalanceSheet
 
 endpoint : /expense/download/balanacesheet
 
@@ -130,7 +130,7 @@ endpoint : /expense/download/balanacesheet
 
 
 
-## GET Retrieve individual user expenses.
+### GET Retrieve individual user expenses.
 
 endpoint : /expense/userexp
 
@@ -161,9 +161,15 @@ endpoint : /expense/userexp
 
 
 
-## GET Retrieve overall expenses.
+### GET Retrieve overall expenses.
 
 endpoint : /expense/fullexp
+
+### Params
+
+|Name|Location|Type|Required|Description|
+|---|---|---|---|---|
+|Authorization|header|string| no |none|
 
 > Response Examples
 
@@ -184,7 +190,7 @@ endpoint : /expense/fullexp
 
 # AuthAPIs
 
-## POST Login
+### POST Login
 
 endpoint : /user/login
 
@@ -217,7 +223,7 @@ endpoint : /user/login
 
 
 
-## GET Logout
+### GET Logout
 
 endpoint : /user/logout
 
