@@ -20,6 +20,11 @@ def findUsers(emails):
     return user_dict
 
 
+def findAllUsers():
+        users = db.users.find({}, {"_id": 0, "name": 1, "email": 1, "expenses": 1})
+        user_list = list(users)
+        return user_list
+
 def addExpense(updates):
 
     '''

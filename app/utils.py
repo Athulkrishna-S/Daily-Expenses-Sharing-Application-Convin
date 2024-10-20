@@ -22,3 +22,13 @@ def validate_user_data(data):
         return False
     
     return True
+
+def validatePercentageSplit(*argv):
+        
+    total_percentage = sum(argv)
+    return total_percentage == 100
+
+def validateSplit(amt,*argv):
+    total=sum(argv)
+    return total==amt
+
