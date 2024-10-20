@@ -16,10 +16,10 @@ db = client[os.getenv("DB_NAME")]
 
 
 from app.user_routes import user_bp
-#from app.expense_routes import expense_bp
+from app.expense_routes import expense_bp
 
 app.register_blueprint(user_bp, url_prefix='/user')
-#app.register_blueprint(expense_bp)
+app.register_blueprint(expense_bp,url_prefix='/expense')
 
 
 

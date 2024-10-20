@@ -1,7 +1,8 @@
 # Ignore the virtual environment directory
 covin/
 
-
+# Ignore test file
+test.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
