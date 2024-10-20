@@ -52,18 +52,14 @@ endpoint : /user/getDetail
 
 > Body Parameters
 
-```json
-{
-  "email": "aa@gmail.com"
-}
-```
+
 
 ### Params
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
 |Authorization|header|string| yes |none|
-|body|body|object| yes |none|
+|body|body|object| no |none|
 
 > Response Examples
 
@@ -138,20 +134,16 @@ endpoint : /expense/download/balanacesheet
 
 endpoint : /expense/userexp
 
-> Body Parameters
 
-```json
-{
-  "email": "aa@gmail.com"
-}
-```
+
+
 
 ### Params
 
 |Name|Location|Type|Required|Description|
 |---|---|---|---|---|
 |Authorization|header|string| yes |none|
-|body|body|object| yes |none|
+
 
 > Response Examples
 
