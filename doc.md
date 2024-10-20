@@ -1,29 +1,12 @@
----
-title: Covin
-language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - javascript: JavaScript
-  - ruby: Ruby
-  - python: Python
-  - php: PHP
-  - java: Java
-  - go: Go
-toc_footers: []
-includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 2
-generator: "@tarslib/widdershins v4.0.23"
 
----
+
+
 
 # Covin
 
 
 
-# Authentication
+
 
 # userAPIs
 
@@ -61,20 +44,7 @@ endpoint : /user/create
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **201**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» message|string|true|none||none|
-|» statusCode|integer|true|none||none|
 
 ## GET getUserDetails
 
@@ -109,23 +79,7 @@ endpoint : /user/getDetail
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» email|string|true|none||none|
-|» expenses|object|true|none||none|
-|» mobile|integer|true|none||none|
-|» name|string|true|none||none|
-|» statusCode|integer|true|none||none|
 
 # ExpenseAPIs
 
@@ -167,20 +121,6 @@ endpoint : /expense/add
 }
 ```
 
-### Responses
-
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» message|string|true|none||none|
-|» statusCode|integer|true|none||none|
 
 ## GET DownloadBalanceSheet
 
@@ -192,17 +132,7 @@ endpoint : /expense/download/balanacesheet
 |---|---|---|---|---|
 |Authorization|header|string| no |none|
 
-> Response Examples
 
-> 200 Response
-
-### Responses
-
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
 
 ## GET Retrieve individual user expenses.
 
@@ -237,22 +167,7 @@ endpoint : /expense/userexp
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» Expenses|object|true|none||none|
-|»» Dinner at Olive Garden|integer|true|none||none|
-|»» Lunch|integer|true|none||none|
-|» StatusCode|integer|true|none||none|
 
 ## GET Retrieve overall expenses.
 
@@ -273,23 +188,7 @@ endpoint : /expense/fullexp
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» Data|object|true|none||none|
-|»» Dinner at Olive Garden|integer|true|none||none|
-|»» Lunch|integer|true|none||none|
-|»» Total|integer|true|none||none|
-|» StatusCode|integer|true|none||none|
 
 # AuthAPIs
 
@@ -324,20 +223,7 @@ endpoint : /user/login
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
-
-### Responses Data Schema
-
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» statusCode|integer|true|none||none|
-|» token|string|true|none||none|
 
 ## GET Logout
 
@@ -359,19 +245,7 @@ endpoint : /user/logout
 }
 ```
 
-### Responses
 
-|HTTP Status Code |Meaning|Description|Data schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
 
-### Responses Data Schema
 
-HTTP Status Code **200**
-
-|Name|Type|Required|Restrictions|Title|description|
-|---|---|---|---|---|---|
-|» msg|string|true|none||none|
-
-# Data Schema
 
