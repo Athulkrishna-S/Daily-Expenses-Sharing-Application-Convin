@@ -29,7 +29,7 @@ generator: "@tarslib/widdershins v4.0.23"
 
 ## POST Create User
 
-POST /user/create
+endpoint : /user/create
 
 > Body Parameters
 
@@ -78,7 +78,7 @@ HTTP Status Code **201**
 
 ## GET getUserDetails
 
-GET /user/getDetail
+endpoint : /user/getDetail
 
 > Body Parameters
 
@@ -131,7 +131,7 @@ HTTP Status Code **200**
 
 ## POST addExpense
 
-POST /expense/add
+endpoint : /expense/add
 
 > Body Parameters
 
@@ -184,7 +184,7 @@ HTTP Status Code **200**
 
 ## GET DownloadBalanceSheet
 
-GET /expense/download/balanacesheet
+endpoint : /expense/download/balanacesheet
 
 ### Params
 
@@ -206,7 +206,7 @@ GET /expense/download/balanacesheet
 
 ## GET Retrieve individual user expenses.
 
-GET /expense/userexp
+endpoint : /expense/userexp
 
 > Body Parameters
 
@@ -256,7 +256,7 @@ HTTP Status Code **200**
 
 ## GET Retrieve overall expenses.
 
-GET /expense/fullexp
+endpoint : /expense/fullexp
 
 > Response Examples
 
@@ -295,7 +295,7 @@ HTTP Status Code **200**
 
 ## POST Login
 
-POST /user/login
+endpoint : /user/login
 
 > Body Parameters
 
@@ -341,7 +341,7 @@ HTTP Status Code **200**
 
 ## GET Logout
 
-GET /user/logout
+endpoint : /user/logout
 
 ### Params
 
