@@ -1,5 +1,8 @@
 import re
 
+
+
+
 def validate_user_data(data):
     required_fields = {"email", "name", "mobile"}
     
@@ -31,4 +34,5 @@ def validatePercentageSplit(*argv):
 def validateSplit(amt,*argv):
     total=sum(argv)
     return total==amt
+
 

@@ -1,4 +1,5 @@
 from flask import Blueprint, request , jsonify, send_file, render_template_string
+from flask_jwt_extended import  create_access_token, jwt_required, get_jwt_identity, get_jwt
 from app.models import addExpense, findUsers, findAllUsers, findUser
 from app.utils import validatePercentageSplit, validateSplit
 from app.balanceSheet import generateBalanceSheet
@@ -8,6 +9,7 @@ import io
 expense_bp=Blueprint('expense',__name__)
 
 @expense_bp.route('/add',methods=['POST'])
+@jwt_required()
 def addExpenseRoute():
 
 
@@ -99,6 +101,7 @@ def addExpenseRoute():
         return jsonify({"message": "An error occurred", "error": str(e), "statusCode": 500}), 500
     
 @expense_bp.route('/download/balanacesheet',methods=['GET'])
+@jwt_required()
 def downloadBalanceSheet():
     try:
         
@@ -116,8 +119,9 @@ def downloadBalanceSheet():
         return jsonify({"message": "An error occurred", "error": str(e), "statusCode": 500}), 500
     
 
-@expense_bp.route('/getData/<username>', methods=['POST'])
-def getUserExpense(username):
+@expense_bp.route('/userexp', methods=['GET'])
+@jwt_required()
+def getUserExpense():
     '''
     Expected JSON body:
 
@@ -125,7 +129,7 @@ def getUserExpense(username):
     '''
 
     try:
-        data = request.get_json()
+        data = get_jwt_identity()
 
         # Validate input data
         if not data or 'email' not in data:
@@ -144,8 +148,9 @@ def getUserExpense(username):
         return jsonify({"message": "An error occurred", "error": str(e), "statusCode": 500}), 500
 
 
-@expense_bp.route('/getData', methods=['GET'])
+@expense_bp.route('/fullexp', methods=['GET'])
 def getAllExpense():
+
     try:
 
 
